@@ -64,7 +64,7 @@ class Hessian2JsonObjectInput(
 
     override fun readObject(): Any? {
         stringWriter.buffer.setLength(0)
-        hessian2JsonTranscoder.readMap()
+        hessian2JsonTranscoder.readValue()
         jsonGenerator.flush()
         return stringWriter.toString()
     }
